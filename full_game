@@ -1,0 +1,43 @@
+goal = int(input("what are you playing to?   "))
+
+current_team1 = goal
+current_team2 = goal
+
+def team1():
+	global current_team1
+	round_team1 = int(input("Team 1, enter your score:  "))
+	current_team1 = current_team1 - round_team1
+	if current_team1 < 0:
+		current_team1 = current_team1 + round_team1
+	print(current_team1)
+	
+	
+def team2():
+	global current_team2
+	round_team2 = int(input("Team 2, enter your score:  "))
+	current_team2 = current_team2 - round_team2
+	if current_team2 < 0:
+		current_team2 = current_team2 + round_team2
+	print(current_team2)
+
+	
+def game():	
+	while current_team1 and current_team2 != 0:
+
+		team1()
+		if current_team1 == 0:
+			break
+	
+	
+		team2()
+
+game()
+		
+T20 = 20*3
+T19 = 19*3
+T18 = 18*3
+T17 = 17*3
+T16 = 16*3
+
+
+input()
